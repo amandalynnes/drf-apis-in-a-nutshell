@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "drf-apis-in-a-nutshell-amandalynnes"
+version = "0.1.0"
+description = "This assignment is to use Django REST framework and a fresh Django server to create an API as a potential demo for a shoe store"
+authors = ["Amanda Simmons <carpe737diem@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^3.1.7"
+djangorestframework = "^3.12.2"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.9.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
