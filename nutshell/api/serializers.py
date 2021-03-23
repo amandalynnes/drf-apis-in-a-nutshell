@@ -1,4 +1,4 @@
-from api.models import Manufacturer, ShoeType, Shoe, ShoeColor
+from nutshell.api.models import Manufacturer, ShoeType, Shoe, ShoeColor
 from rest_framework import serializers
 
 

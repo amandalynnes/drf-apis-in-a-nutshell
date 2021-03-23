@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from rest_framework.viewsets import ModelViewSet
 
-from api.serializers import ManufacturerSerializer, ShoeTypeSerializer, ShoeColorSerializer, ShoeSerializer
-from api.models import Manufacturer, Shoe, ShoeColor, ShoeType
+from nutshell.api.serializers import ManufacturerSerializer, ShoeTypeSerializer, ShoeColorSerializer, ShoeSerializer
+from nutshell.api.models import Manufacturer, Shoe, ShoeColor, ShoeType
 
 
 class ManufacturerViewSet(ModelViewSet):
@@ -12,15 +12,15 @@ class ManufacturerViewSet(ModelViewSet):
 
 class ShoeTypeViewSet(ModelViewSet):
     serializer_class = ShoeTypeSerializer
-    queryset = ShoeTypeSerializer.objects.all()
+    queryset = ShoeType.objects.all()
 
 
 class ShoeColorViewSet(ModelViewSet):
     serializer_class = ShoeColorSerializer
-    queryset = ShoeColorSerializer.objects.all()
+    queryset = ShoeColor.objects.all()
 
 
 class ShoeViewSet(ModelViewSet):
     serializer_class = ShoeSerializer
-    queryset = ShoeSerializer.objects.all()
+    queryset = Shoe.objects.all()
 

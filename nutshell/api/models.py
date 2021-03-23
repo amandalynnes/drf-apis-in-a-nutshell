@@ -48,7 +48,7 @@ class ShoeColor(models.Model):
 
 
 class Shoe(models.Model):
-    size = models.IntegerField(max_length=4)
+    size = models.IntegerField()
     brand_name = models.CharField(max_length=20)
     manufacturer = models.ForeignKey(Manufacturer, on_delete=models.CASCADE, null=True, blank=True)
     color = models.ForeignKey(ShoeColor, on_delete=models.CASCADE, null=True, blank=True)

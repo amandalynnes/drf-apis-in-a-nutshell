@@ -1,6 +1,6 @@
 from django.conf.urls import include, url
 from rest_framework import routers
-from api.views import ManufacturerViewSet, ShoeTypeViewSet, ShoeViewSet, ShoeColorViewSet
+from nutshell.api.views import ManufacturerViewSet, ShoeTypeViewSet, ShoeViewSet, ShoeColorViewSet
 
 router = routers.DefaultRouter()
 
