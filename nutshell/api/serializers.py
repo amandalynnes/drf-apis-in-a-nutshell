@@ -13,13 +13,13 @@ class ManufacturerSerializer(serializers.HyperlinkedModelSerializer):
 class ShoeTypeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = ShoeType
-        fields = ('style')
+        fields = ('style',)
 
 
 class ShoeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Shoe
-        fields = ('color_name')
+        fields = ('color_name',)
 
 
 class ShoeColorSerializer(serializers.HyperlinkedModelSerializer):
