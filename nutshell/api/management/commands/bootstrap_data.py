@@ -1,4 +1,4 @@
-from django.core.management.base import BaseCommand, CommandError
+from django.core.management.base import BaseCommand
 from nutshell.api.models import ShoeType, ShoeColor
 
 
@@ -102,7 +102,4 @@ class Command(BaseCommand):
         self.add_shoe_types()
         self.add_shoe_colors()
 
-    # def handle(self, *args, **options):
-    #     ShoeType(
 
-    #     )
