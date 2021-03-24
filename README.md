@@ -1,3 +1,13 @@
+<!-- 
+References:
+
+https://docs.djangoproject.com/en/3.0/howto/custom-management-commands/
+
+https://simpleisbetterthancomplex.com/tutorial/2018/08/27/how-to-create-custom-django-management-commands.html
+
+ -->
+
+
 # drf-apis-in-a-nutshell
 
 As backend developers, we arguably spend just as much time focusing on services and endpoints than front-facing rendering. APIs in Python are equally easy to set up in micro-frameworks or full-scale frameworks, but using Django allows us the use of some packages to help make our lives easier.
