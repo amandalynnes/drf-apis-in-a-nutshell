@@ -1,5 +1,6 @@
 from django.core.management.base import BaseCommand, CommandError
-# from api.models import ShoeType, ShoeColor
+from nutshell.api.models import ShoeType, ShoeColor
+
 
 class Command(BaseCommand):
     help = '''Populates the ShoeType table with the following entries:
@@ -20,29 +21,88 @@ class Command(BaseCommand):
             White
             Black'''
 
+    def add_shoe_types(self):
+        new_style = ShoeType.objects.create(
+            style='sneaker'
+        )
+        new_style.save()
 
-# def new_ticket(request, ticket_id):
-#     ticket = TicketItem.objects.filter(id=ticket_id).first()
-#     ticket.ticket_status = 'NW'
-#     ticket.assigned_to = None
-#     ticket.completed_by = None
-#     ticket.filed_by = request.user
-#     ticket.save()
+        new_style = ShoeType.objects.create(
+            style='boot'
+        )
+        new_style.save()
 
-    # def add_shoe_types(self, ):
-    #     ShoeType.objects.create(
-    #         style='sneaker'
-    #     )
+        new_style = ShoeType.objects.create(
+            style='sandal'
+        )
+        new_style.save()
 
+        new_style = ShoeType.objects.create(
+            style='dress'
+        )
+        new_style.save()
 
-    # def add_shoe_colors(self, ):
-    #     ShoeColor.objects.create(
+        new_style = ShoeType.objects.create(
+            style='other'
+        )
+        new_style.save()
 
-    #     )
+    def add_shoe_colors(self):
+        add_color = ShoeColor.objects.create(
+            color_name='RE'
+        )
+        add_color.save()
 
-    # def handle(self, *args, **kwargs):
-    #     self.add_shoe_types()
-    #     self.add_shoe_colors()
+        add_color = ShoeColor.objects.create(
+            color_name='OR'
+        )
+        add_color.save()
+
+        add_color = ShoeColor.objects.create(
+            color_name='YE'
+        )
+        add_color.save()
+
+        add_color = ShoeColor.objects.create(
+            color_name='OR'
+        )
+        add_color.save()
+
+        add_color = ShoeColor.objects.create(
+            color_name='GR'
+        )
+        add_color.save()
+
+        add_color = ShoeColor.objects.create(
+            color_name='BE'
+        )
+        add_color.save()
+
+        add_color = ShoeColor.objects.create(
+            color_name='IN'
+        )
+        add_color.save()
+
+        add_color = ShoeColor.objects.create(
+            color_name='VI'
+        )
+        add_color.save()
+
+        add_color = ShoeColor.objects.create(
+            color_name='WH'
+        )
+        add_color.save()
+
+        add_color = ShoeColor.objects.create(
+            color_name='BL'
+        )
+        add_color.save()
 
     def handle(self, *args, **options):
-        print('Command: bootstrap_data')
+        self.add_shoe_types()
+        self.add_shoe_colors()
+
+    # def handle(self, *args, **options):
+    #     ShoeType(
+
+    #     )

@@ -16,15 +16,15 @@ class ShoeTypeSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('style',)
 
 
-class ShoeSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Shoe
-        fields = ('color_name',)
-
-
 class ShoeColorSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = ShoeColor
+        fields = ('color_name',)
+
+
+class ShoeSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Shoe
         fields = (
             'size',
             'brand_name',
