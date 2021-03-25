@@ -22,81 +22,27 @@ class Command(BaseCommand):
             Black'''
 
     def add_shoe_types(self):
-        new_style = ShoeType.objects.create(
-            style='sneaker'
-        )
-        new_style.save()
-
-        new_style = ShoeType.objects.create(
-            style='boot'
-        )
-        new_style.save()
-
-        new_style = ShoeType.objects.create(
-            style='sandal'
-        )
-        new_style.save()
-
-        new_style = ShoeType.objects.create(
-            style='dress'
-        )
-        new_style.save()
-
-        new_style = ShoeType.objects.create(
-            style='other'
-        )
-        new_style.save()
+        ShoeType.objects.bulk_create([
+            ShoeType(style='sneaker'),
+            ShoeType(style='boot'),
+            ShoeType(style='sandal'),
+            ShoeType(style='dress'),
+            ShoeType(style='other'),
+        ])
 
     def add_shoe_colors(self):
-        add_color = ShoeColor.objects.create(
-            color_name='RE'
-        )
-        add_color.save()
-
-        add_color = ShoeColor.objects.create(
-            color_name='OR'
-        )
-        add_color.save()
-
-        add_color = ShoeColor.objects.create(
-            color_name='YE'
-        )
-        add_color.save()
-
-        add_color = ShoeColor.objects.create(
-            color_name='OR'
-        )
-        add_color.save()
-
-        add_color = ShoeColor.objects.create(
-            color_name='GR'
-        )
-        add_color.save()
-
-        add_color = ShoeColor.objects.create(
-            color_name='BE'
-        )
-        add_color.save()
-
-        add_color = ShoeColor.objects.create(
-            color_name='IN'
-        )
-        add_color.save()
-
-        add_color = ShoeColor.objects.create(
-            color_name='VI'
-        )
-        add_color.save()
-
-        add_color = ShoeColor.objects.create(
-            color_name='WH'
-        )
-        add_color.save()
-
-        add_color = ShoeColor.objects.create(
-            color_name='BL'
-        )
-        add_color.save()
+        ShoeColor.objects.bulk_create([
+            ShoeColor(color_name='RE'),
+            ShoeColor(color_name='OR'),
+            ShoeColor(color_name='YE'),
+            ShoeColor(color_name='OR'),
+            ShoeColor(color_name='GR'),
+            ShoeColor(color_name='BE'),
+            ShoeColor(color_name='IN'),
+            ShoeColor(color_name='VI'),
+            ShoeColor(color_name='WH'),
+            ShoeColor(color_name='BL'),
+        ])
 
     def handle(self, *args, **options):
         self.add_shoe_types()
