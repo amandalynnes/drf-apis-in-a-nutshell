@@ -35,7 +35,6 @@ class Command(BaseCommand):
             ShoeColor(color_name='RE'),
             ShoeColor(color_name='OR'),
             ShoeColor(color_name='YE'),
-            ShoeColor(color_name='OR'),
             ShoeColor(color_name='GR'),
             ShoeColor(color_name='BE'),
             ShoeColor(color_name='IN'),
